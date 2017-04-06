@@ -12,7 +12,6 @@ TC_tree = f.Get("hgcaltriggergeomtester/TreeTriggerCells")
 
 cells_wafer_info = tree2array(cells_tree, branches = ['id','wafertype','wafer','layer','subdet','zside','x','y','cell','waferrow','wafercolumn'])
 cells_tc_info = tree2array(TC_tree, branches = ['triggercell', 'c_id', 'c_cell', 'wafer', 'layer', 'subdet', 'zside'])
-
 f.close()
 
 #########################################################
