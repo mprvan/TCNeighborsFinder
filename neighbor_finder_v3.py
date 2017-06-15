@@ -6,7 +6,8 @@ import pprint
 from shapely.geometry import Polygon
 import waferGeometry
 
-f = root_open("test_triggergeom.root")
+#f = root_open("test_triggergeom.root")
+f = root_open("test_triggergeom_921_D17.root")
 cells_tree = f.Get("hgcaltriggergeomtester/TreeCells") 
 TC_tree = f.Get("hgcaltriggergeomtester/TreeTriggerCells")
 
@@ -173,7 +174,7 @@ def ExtractWaferInfoLayer1(cells_wafer_info, subdet):
 def ExtractWaferInfo(cells_wafer_info, subdet):
     wafer_info = []
     last_layer = 12
-    if subdet == 3 : last_layer = 27
+    if subdet == 3 : last_layer = 28
     for i in range(cells_wafer_info.shape[0]):
         if cells_wafer_info[i][4] == subdet and cells_wafer_info[i][5] == -1:
             if cells_wafer_info[i][3] == 1 or cells_wafer_info[i][3] == last_layer:
